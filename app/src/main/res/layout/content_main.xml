@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <import type="com.smi.viewtranslator.AVTSwitch" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/helloword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <!--app:localizeText="@{`Hello`}"-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:localizeText="@{@string/start}" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:localizeTextOff="@{`Login`}"
+                app:localizeTextOn="@{`Signup`}" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:localizeText="@{`Completed`}" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:localizeText="@{`Completed`}" />
+
+            <CheckedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:localizeText="@{`Buy a ticket`}" />
+
+            <com.smi.viewtranslator.AVTSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:showText="true"
+                app:localizeTextOff="@{`Off`}"
+                app:localizeTextOn="@{`Active`}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:localizeHint="@{`Type your name`}" />
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
